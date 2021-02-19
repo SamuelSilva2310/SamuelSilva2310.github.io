@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Expenses Tracker | Samuel Silva</title>
+</head>
+<body>
+
+    <header>
+        <h1>Expenses Tracker</h1>
+        <h2>Add new Expense</h2>
+    </header>
+
+    <div class="input-container">
+        
+        <form>
+
+            <div class="expenseText-container">
+                <label for="expenseText">Name</label>
+                <input type="text" id="expenseText-input" class="expenseText-input" name="expenseText" placeholder="Where was the expense made?" required/>
+            </div>
+
+            <div class="date_amount-container">
+                <div class="date-container">
+                    <label for="expenseDate">Date</label>
+                    <input type="date" id="expenseDate-input" class="expenseDate-input" name="expenseDate" required/>
+                </div>
+                <div class="amount-container">
+                    <label for="expenseAmount">Amount</label>
+                    <input type="number" id="expenseAmount-input" class="expenseAmount-input"  name="expenseAmount" min="0"  step=".01" required/>
+                </div>
+            </div>
+            <button class="expense-button" type="submit">
+                <h3>Add Expense</h3>
+            </button>
+        </form>
+    </div>
+
+
+    <div class="table-container">
+        
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Name:</th>
+                    <th>Amount:</th>
+                    <th>Date:</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody class="expense-container">
+                <tr class="table-placeholder"><td colspan="4" >No expenses added yet!</td></tr>
+              
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
